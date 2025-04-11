@@ -5,5 +5,4 @@ export interface IEarthQuakeLog {
     Latitude: number;
     Location: string;
     Magnitude: number;
-    ExpiryTime: 1744384149;
 }
