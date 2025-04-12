@@ -4,24 +4,39 @@ import { getEqLogs } from "./utilities/api.ts";
 import { IEarthQuakeLog } from "./utilities/interfaces.ts";
 import LatestEarthQuakes from "./components/LatestEarthQuakes/LatestEarthQuakes.tsx";
 import TopFive from "./components/TopFive/TopFive.tsx";
+import { Loader } from "@fremtind/jokul";
 
 function App() {
-    const [allEarthquakes, SetAllEarthquakes] = useState<IEarthQuakeLog[]>([]);
+    const [loading, setLoading] = useState<boolean>(true);
+    const [allEarthquakes, setAllEarthquakes] = useState<IEarthQuakeLog[]>([]);
 
     useEffect(() => {
         (async ()=> {
-            const logs = await getEqLogs() ?? [];
-            SetAllEarthquakes(logs);
+            try {
+                const logs = await getEqLogs() ?? [];
+                setAllEarthquakes(logs);
+            } catch (err) {
+                console.error(err);
+            } finally {
+                setLoading(false);
+            }
         })();
     }, []);
 
     return (
         <div className="app">
             <h1>Eartquake Monitoring App (EQMA)</h1>
-            <div className="app__cards">
-                <LatestEarthQuakes allEarthquakes={allEarthquakes} />
-                <TopFive allEarthquakes={allEarthquakes} />
-            </div>
+            {loading ? (
+                <Loader
+                    variant="large"
+                    textDescription="Fetching EQMA Logs"
+                />
+            ): (
+                <div className="app__cards">
+                    <LatestEarthQuakes allEarthquakes={allEarthquakes} />
+                    <TopFive allEarthquakes={allEarthquakes} />
+                </div>
+            )}
         </div>
     );
 }
