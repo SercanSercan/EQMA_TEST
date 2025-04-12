@@ -1,3 +1,20 @@
 @use '@fremtind/jokul/styles/core/jkl';
 @use '@fremtind/jokul/styles/core/core';
 @use '@fremtind/jokul/styles/components/tag';
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+
+  @media (width < 680px) {
+    padding: 1rem;
+  }
+
+  h1 {
+    margin: 1rem 0;
+    text-align: center;
+  }
+}

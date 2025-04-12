@@ -15,8 +15,11 @@ function App() {
     }, []);
 
     return (
-        <div>
-            <LatestEarthQuakes allEarthquakes={allEarthquakes} />
+        <div className="app">
+            <h1>Eartquake Monitoring App (EQMA)</h1>
+            <div className="app__cards">
+                <LatestEarthQuakes allEarthquakes={allEarthquakes} />
+            </div>
         </div>
     );
 }
