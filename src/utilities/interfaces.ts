@@ -1,3 +1,4 @@
+// For Data
 export interface IEarthQuakeLog {
     Depth: number;
     Timestamp: string;
@@ -5,4 +6,9 @@ export interface IEarthQuakeLog {
     Latitude: number;
     Location: string;
     Magnitude: number;
+}
+
+// For Components
+export interface ILatestEarthQuakes {
+    allEarthquakes: IEarthQuakeLog[];
 }
