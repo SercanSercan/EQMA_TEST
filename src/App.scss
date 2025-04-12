@@ -2,6 +2,7 @@
 @use '@fremtind/jokul/styles/core/core';
 @use '@fremtind/jokul/styles/components/tag';
 @use '@fremtind/jokul/styles/components/loader';
+@use '@fremtind/jokul/styles/components/message';
 
 .app {
   display: flex;
