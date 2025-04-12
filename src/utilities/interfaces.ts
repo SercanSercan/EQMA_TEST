@@ -12,3 +12,13 @@ export interface IEarthQuakeLog {
 export interface ILatestEarthQuakes {
     allEarthquakes: IEarthQuakeLog[];
 }
+
+export interface ILogRow {
+    earthquakeLog: IEarthQuakeLog;
+}
+
+export interface ILocationLink {
+    location: string;
+    lat: number;
+    lon: number;
+}
