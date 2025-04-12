@@ -1,3 +1,4 @@
+import "./LocationLink.scss";
 import { ILocationLink } from "../../utilities/interfaces.ts";
 
 const LocationLink: React.FC<ILocationLink> = ({ location, lat, lon }) => {
@@ -12,10 +13,10 @@ const LocationLink: React.FC<ILocationLink> = ({ location, lat, lon }) => {
             const rightParenthesis = location.indexOf(")");
             const leftSideStr = location.substring(0, leftParenthesis).trim();
             const city = location.substring(leftParenthesis + 1, rightParenthesis).trim();
-            return city + ", " + leftSideStr;
+            return <><strong>{city}</strong>, {leftSideStr}</>;
         }
         else {
-            return location;
+            return <strong>{location}</strong>;
         }
     };
 
