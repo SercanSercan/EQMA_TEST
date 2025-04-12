@@ -2,7 +2,6 @@ import './App.scss';
 import { useEffect, useState } from "react";
 import { getEqLogs } from "./utilities/api.ts";
 import { IEarthQuakeLog } from "./utilities/interfaces.ts";
-import { ErrorTag } from "@fremtind/jokul";
 import LatestEarthQuakes from "./components/LatestEarthQuakes/LatestEarthQuakes.tsx";
 
 function App() {
