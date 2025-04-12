@@ -17,15 +17,15 @@ const MagnitudeTag: React.FC<IMagnitudeTag> = ({ magnitude }) => {
 
     const mag = parseFloat(magStr);
 
-    if (mag < 2) {                                // Green    micro
+    if (mag < 2) {                                  // Green    micro
         return <SuccessTag>{mag}</SuccessTag>;
-    } else if (mag >= 2 && mag < 4) {       // Gray     minor
+    } else if (mag >= 2 && mag < 4) {               // Gray     minor
         return <Tag>{magStr}</Tag>;
-    } else if (mag >= 4 && mag < 5.5) {     // Blue     moderate
+    } else if (mag >= 4 && mag < 5.5) {             // Blue     moderate
         return <InfoTag>{mag}</InfoTag>;
-    } else if (mag >= 5.5 && mag < 6.4) {   // Yellow   strong
+    } else if (mag >= 5.5 && mag < 6.4) {           // Yellow   strong
         return <WarningTag>{mag}</WarningTag>;
-    } else {                                            // Red      major
+    } else {                                        // Red      major
         return <ErrorTag>{mag}</ErrorTag>;
     }
 };
