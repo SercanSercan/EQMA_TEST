@@ -1,4 +1,3 @@
-import "./LocationLink.scss";
 import { ILocationLink } from "../../utilities/interfaces.ts";
 
 const LocationLink: React.FC<ILocationLink> = ({ location, lat, lon }) => {

@@ -27,7 +27,10 @@ function App() {
 
     return (
         <div className="app">
-            <h1>Eartquake Monitoring App (EQMA)</h1>
+            <header>
+                <h1>Eartquake Monitoring App (EQMA)</h1>
+            </header>
+            <main>
             {loading && (
                 <Loader
                     variant="large"
@@ -46,6 +49,10 @@ function App() {
                     dismissed={false}
                 >Our service is down 😔</ErrorMessage>
             )}
+            </main>
+            <footer>
+                The Earthquake logs on this website are collected from <a href="http://www.koeri.boun.edu.tr/scripts/lst9.asp">Kandilli Observatory</a>.
+            </footer>
         </div>
     );
 }
