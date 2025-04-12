@@ -7,14 +7,23 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem;
-
-  @media (width < 680px) {
-    padding: 1rem;
-  }
 
   h1 {
     margin: 1rem 0;
     text-align: center;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  @media (width < 920px) {
+    padding: 1rem;
+
+    &__cards {
+      flex-direction: column-reverse;
+    }
   }
 }

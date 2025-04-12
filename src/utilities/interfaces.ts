@@ -13,6 +13,10 @@ export interface ILatestEarthQuakes {
     allEarthquakes: IEarthQuakeLog[];
 }
 
+export interface ITopFive {
+    allEarthquakes: IEarthQuakeLog[];
+}
+
 export interface ILogRow {
     earthquakeLog: IEarthQuakeLog;
 }
