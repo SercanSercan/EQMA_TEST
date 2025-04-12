@@ -1,15 +1,15 @@
 import './LogRow.scss';
 import { ILogRow } from "../../utilities/interfaces.ts";
-import { ErrorTag } from "@fremtind/jokul";
 import LocationLink from "../LocationLink/LocationLink.tsx";
 import { formatDate } from "../../utilities/helpers.ts";
+import MagnitudeTag from "../MagnitudeTag/MagnitudeTag.tsx";
 
 const LogRow: React.FC<ILogRow> = ({ earthquakeLog }) => {
     const { Depth, Magnitude, Location, Timestamp, Longitude, Latitude } = earthquakeLog;
 
     return (
         <div className="logRow">
-            <ErrorTag>{Magnitude}</ErrorTag>
+            <MagnitudeTag magnitude={Magnitude} />
             <div className="logRow__info">
                 <div className="logRow__info__location">
                     <LocationLink location={Location} lat={Latitude} lon={Longitude} />

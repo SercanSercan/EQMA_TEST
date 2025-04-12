@@ -22,3 +22,7 @@ export interface ILocationLink {
     lat: number;
     lon: number;
 }
+
+export interface IMagnitudeTag {
+    magnitude: number;
+}
