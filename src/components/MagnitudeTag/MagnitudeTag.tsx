@@ -10,16 +10,23 @@ import { ErrorTag, InfoTag, SuccessTag, Tag, WarningTag } from "@fremtind/jokul"
 * */
 const MagnitudeTag: React.FC<IMagnitudeTag> = ({ magnitude }) => {
 
-    if (magnitude < 2) {                                // Green    micro
-        return <SuccessTag>{magnitude}</SuccessTag>;
-    } else if (magnitude >= 2 && magnitude < 4) {       // Gray     minor
-        return <Tag>{magnitude}</Tag>;
-    } else if (magnitude >= 4 && magnitude < 5.5) {     // Blue     moderate
-        return <InfoTag>{magnitude}</InfoTag>;
-    } else if (magnitude >= 5.5 && magnitude < 6.4) {   // Yellow   strong
-        return <WarningTag>{magnitude}</WarningTag>;
+    let magStr = magnitude.toString();
+    if (magStr.length === 1) {
+        magStr = magStr + ".0";
+    }
+
+    const mag = parseFloat(magStr);
+
+    if (mag < 2) {                                // Green    micro
+        return <SuccessTag>{mag}</SuccessTag>;
+    } else if (mag >= 2 && mag < 4) {       // Gray     minor
+        return <Tag>{magStr}</Tag>;
+    } else if (mag >= 4 && mag < 5.5) {     // Blue     moderate
+        return <InfoTag>{mag}</InfoTag>;
+    } else if (mag >= 5.5 && mag < 6.4) {   // Yellow   strong
+        return <WarningTag>{mag}</WarningTag>;
     } else {                                            // Red      major
-        return <ErrorTag>{magnitude}</ErrorTag>;
+        return <ErrorTag>{mag}</ErrorTag>;
     }
 };
 
