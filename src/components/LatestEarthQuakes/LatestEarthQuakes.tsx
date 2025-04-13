@@ -6,7 +6,7 @@ import { LIMIT } from "../../utilities/constants.ts";
 const LatestEarthQuakes: React.FC<ILatestEarthQuakes> = ({ allEarthquakes }) => {
     return (
         <div className="latestEarthQuakes">
-            <h2>Latest Earthquakes in last 24h</h2>
+            <h2>Latest Earthquakes</h2>
             <div className="latestEarthQuakes__list">
                 {allEarthquakes.slice(0, LIMIT).map((earthquake: IEarthQuakeLog, idx) => (
                     <LogRow earthquakeLog={earthquake} key={idx}/>
