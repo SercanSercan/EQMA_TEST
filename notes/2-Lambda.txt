@@ -1,0 +1,28 @@
+2 - Lambda - fetchAndInsertEqLogs
+- [x] I created a lambda function called fetchAndInsertEqLogs in Python.
+- [x] I wrote some basic test code to see I am able to download HTML content with urllib.request.urlopen (Remember decoding for Turkish letters).
+- [x] EQ logs are found inside some pre HTML tags. So, I need beautifulsoup4 library. I created  a layer with the following commands:
+    - [x] mkdir -p bs4-layer/python
+    - [x] pip3 install beautifulsoup4 -t bs4-layer/python
+    - [x] cd bs4-layer
+    - [x] zip -r bs4-layer.zip .
+    - [x] Upload zip file to layers
+    - [x] Include layer in lambda function console
+    - [x] Try beautiful soup to extract pre tag string
+- [x] Parsing
+    - [x] Replace non-breaking spaces with space
+    - [x] Loop through lines
+    - [x] Calculate TTL (epoch time)
+- [x] Create an array of json objects
+    - [x] Create an array of json objects
+    - [x] Cast numeric values from string to decimal (from decimal import Decimal)
+    - [x] Append each json object to array inside the for loop with TTL
+- [x] DynamoDB
+    - [x] Give resource permissions to Lambda function to write to DynamoDB table
+        - [x] Role = lambda-write-to-dynamodb
+        - [x] Policy = lambda-earthquake-write-to-dynamodb
+            - [x] BatchWriteItem
+            - [x] PutItem
+            - [x] UpdateItem
+    - [x] Implement boto3
+- [x] Set Lambda Function to 30 seconds timeout (Configuration > General Configuration)

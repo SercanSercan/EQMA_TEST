@@ -1,0 +1,22 @@
+5- API Gateway
+
+- [x] Go to API Gateway
+- [x] Pick REST API (Click Build button)
+    - [x] Pick New API
+    - [x] Enter API name => EarthquakeLogsAPI
+    - [x] Click Create API
+- [x] Click Create Resource button
+    - [x] Don’t touch Resource Path (leave it as / )
+    - [x] Resource name => /get-earthquakes
+    - [x] Click Create Resource button
+- [x] Click Create Method button
+    - [x] Method Type => GET
+    - [x] Set Lambda Proxy Integration
+    - [x] Choose Lambda Function
+    - [x] Click Create Method button
+- [x] Click Deploy API btn
+    - [x] Choose “New Stage”
+    - [x] Stage Name => prod
+    - [x] Deploy
+- [x] Copy Invoke URL and add path to it with stage name
+    - [x] https://q4fzp6xm48.execute-api.eu-north-1.amazonaws.com/prod/get-earthquakes

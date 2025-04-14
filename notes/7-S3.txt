@@ -1,0 +1,35 @@
+7- S3
+
+- [ ] “npm run build” will create dist folder.
+- [ ] Go to S3 - Create Bucket
+    - [ ] General purpose
+    - [ ] Give unique bucket name
+    - [ ] Unblock “Block all public access” and confirm
+    - [ ] Create bucket in this window
+- [ ] Static hosting setup
+    - [ ] Click on bucket name on new page
+    - [ ] Go to “Static web hosting” at the bottom
+    - [ ] Enable
+    - [ ] write index.html to both
+    - [ ] Save changes
+    - [ ] Go back to Objects tab
+- [ ] Upload your dist/ Files
+    - [ ] Click Upload
+        - [ ] Click Add files will upload index.html and eqma.ico
+        - [ ] Click Add folder will upload assets folder with children files
+        - [ ] Upload & Close
+- [ ] Make it Public
+    - [ ] Permissions > Bucket policy > Click edit
+    - [ ] Click Policy generator
+        - [ ] Select S3 bucket policy
+        - [ ] Principal => *
+        - [ ] Actions => GetObject
+        - [ ] Copy paste bucket ARN
+        - [ ] Click Add Statement
+        - [ ] Click Generate Policy
+        - [ ] Copy policy
+    - [ ] Paste policy with “/*” at the end of ARN
+    - [ ] Save Changes
+- [ ] Click URL
+    - [ ] Go to Properties > Static Web Hosting
+    - [ ] Click the URL at the bottom.

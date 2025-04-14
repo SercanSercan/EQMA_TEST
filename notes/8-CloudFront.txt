@@ -1,0 +1,11 @@
+8- CloudFront
+
+- [ ] Click “Create a CDN distribution”
+    - [ ] Choose origin as your S3 bucket
+    - [ ] Origin access => Public (already selected)
+    - [ ] WAF => Do not enable security protections
+    - [ ] Viewer protocol policy => Redirect HTTP to HTTPS
+    - [ ] Price class => Use only North America and Europe (to save money)
+    - [ ] Default root object => index.html
+    - [ ] Click create distribution
+- [ ] Distribution domain name is your new URL, wait for deployment

@@ -1,0 +1,16 @@
+3- EventBridge Scheduler
+
+- [x] Go to EventBridge > Schedules
+- [x] Click “Create schedule” button
+- [x] 1- Specify
+    - [x] Occurrence => Recurring Schedule
+    - [x] Schedule type => Rate-based Schedule
+    - [x] Flexible time window => Off
+    - [x] Next
+- [x] 2- Select Target
+    - [x] Templated Targets > AWS Lambda Invoke
+    - [x] Select your Lambda function
+- [x] 3- Settings
+    - [x] Do not retry attempts
+    - [x] Permissions > Let AWS create role for you
+- [x] 4- Review and GO!

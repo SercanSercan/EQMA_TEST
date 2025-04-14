@@ -1,0 +1,11 @@
+4- Lambda - GetEarthquakeLogs
+
+- [x] This lambda function, written in Python, communicates with DynamoDB and Api Gateway.
+- [x] Firstly, create a new policy and role for DynamoDB read access
+    - [x] Policy => lambda-earthquake-read-from-dynamodb
+    - [x] Role => lambda-read-from-dynamodb
+- [x] Get values from DynamoDB table
+- [x] Sort them by Timestamp attribute (You cannot sort them via DynamoDB, because we are using scan, not query)
+- [x] Remove ExpiryTime attribute from the logs
+- [ ] CORS header is public for now. If we set up Route 53, we can strict it to:
+    - [ ] "headers": { "Access-Control-Allow-Origin": "https://sondepremler.com" }

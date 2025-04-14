@@ -1,0 +1,14 @@
+1 - DynamoDB
+
+- [x] We start from the end of the Data Ingestion tunnel. So that, we can connect Lambda function and EventBridge one by one.
+- [x] We don’t need LSI or Sort key because we will not keep too many logs
+- [x] I picked both RCU and WCU as 1 during the development phase.
+- [x] Added following attributes
+    - [x] Magnitude (Number)
+    - [x] Location (String)
+    - [x] Depth (Number)
+    - [x] Timestamp (String) => Partition Key
+    - [x] Longitude (Number)
+    - [x] Latitude (Number)
+    - [x] ExpiryTime (Number)
+- [x] Added a test record and identified ExpiryTime as TTL

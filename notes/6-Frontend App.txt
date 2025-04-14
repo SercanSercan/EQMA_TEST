@@ -1,0 +1,29 @@
+6- Frontend App
+
+- [x] Create react-ts app => npm create vite@latest EQMA_TEST -- --template react-ts
+- [x] Install sass => npm install --save-dev sass
+- [x] Add global styles to index.css
+- [x] Use eqma.ico on index.html
+- [x] Install axios => npm i axios
+- [x] Create Utilities/api.ts
+- [x] Create Utilities/interfaces.ts
+- [x] Write get function with axios
+- [x] Install and configure jøkul
+- [x] npm i @fremtind/jokul
+- [x] import jkl css files under App.scss
+- [x] Create LatestEarthQuakes component
+- [x] List logs with slice limit
+- [x] Create constants.ts file with limit const
+    - [x] import fonts from google fonts into index.html
+- [x] Create LogRow
+- [x] Create LocationLink
+- [x] MagnitudeTag
+- [x] under 2 => micro, gray
+- [x] btw 2, 4 => minor, green
+- [x] btw 4, 5.7 => light, blue
+- [x] btw 5.7, 6.3 => strong, yellow
+- [x] over 6.3 => major, red
+- [x] Style App.scss
+- [x] Create TopFive
+- [x] Add Loader
+- [x] Add error message when system is down
