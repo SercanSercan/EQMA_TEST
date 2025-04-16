@@ -1,0 +1,16 @@
+
+- [ ] Hello World! Welcome to my AWS full stack course.
+My name is Sercan and we will build a full-stack app together.
+You can follow all the steps with me on your own AWS account and building this app will cost you nothing.
+On this course, I am building an Earthquake Monitoring App and this app will actually solve a real world problem that I experience very often. I am from Turkey and earthquakes happen very often in Turkey. Once in every 10 years, a major earthquake occurs. So, when I type latest earthquakes to Google in Turkish, here is the top result….
+Explain Architecture
+- [ ] How does it work?
+- [ ] Technology stack
+    - [ ] DynamoDb,
+    - [ ] Lambda
+    - [ ] EventBridge
+    - [ ] S3
+    - [ ] CloudFront
+    - [ ] Api Gateway
+    - [ ] Python
+    - [ ] React, typescript
